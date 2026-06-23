@@ -1,0 +1,66 @@
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 36px;
+  align-items: start;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+.cart-item:last-child { border-bottom: none; }
+.cart-item-img {
+  width: 90px; height: 90px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #f4f1ea;
+}
+.cart-item-img img { width: 100%; height: 100%; object-fit: cover; }
+.cart-item-info h4 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.cart-item-info .brand { font-size: 0.75rem; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.05em; }
+.cart-item-info .meta { font-size: 0.82rem; color: var(--muted); margin-top: 6px; }
+.cart-item-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.cart-item-price { font-weight: 700; font-family: var(--font-serif); font-size: 1.1rem; }
+.cart-remove { font-size: 0.78rem; color: var(--danger); cursor: pointer; }
+
+.qty-control {
+  display: inline-flex; align-items: center;
+  border: 1.5px solid var(--line); border-radius: var(--radius-sm);
+}
+.qty-control button { width: 32px; height: 36px; background: var(--bg); font-size: 1.1rem; }
+.qty-control span { width: 40px; text-align: center; font-size: 0.9rem; font-weight: 600; }
+
+.summary {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+  position: sticky;
+  top: 90px;
+}
+.summary h3 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 18px; }
+.summary-row {
+  display: flex; justify-content: space-between;
+  padding: 9px 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.summary-total {
+  border-top: 1px solid var(--line);
+  margin-top: 10px; padding-top: 16px;
+  font-size: 1.2rem; font-weight: 700; color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .cart-layout { grid-template-columns: 1fr; }
+  .summary { position: static; }
+}

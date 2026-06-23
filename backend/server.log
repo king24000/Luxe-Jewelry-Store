@@ -1,0 +1,10 @@
+INFO:     Started server process [17648]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56654 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56669 - "GET /api/products?limit=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56669 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56669 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56669 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56669 - "GET /api/products?category=makeup HTTP/1.1" 200 OK
